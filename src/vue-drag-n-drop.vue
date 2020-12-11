@@ -93,7 +93,7 @@ export default {
     data: function () {
         return {
             items: [],
-            dropGroups: [],
+            dropGroups: []
         }
     },
 
@@ -130,12 +130,12 @@ export default {
         onCardDrop (columnId, dropResult) {
             if (dropResult.removedIndex !== null || dropResult.addedIndex !== null) {
                 if (dropResult.removedIndex !== null) {
-                    let found = this.dropGroups.filter(p => p.name === columnId)[0];
+                    const found = this.dropGroups.filter(p => p.name === columnId)[0];
                     found.children.splice(dropResult.removedIndex, 1);
                 }
 
                 if (dropResult.addedIndex !== null) {
-                    let found = this.dropGroups.filter(p => p.name === columnId)[0];
+                    const found = this.dropGroups.filter(p => p.name === columnId)[0];
                     found.children.splice(dropResult.addedIndex, 0, dropResult.payload);
                 }
             }
@@ -152,7 +152,7 @@ export default {
             return function (index) {
                 const found = that.dropGroups.filter(p => p.name === id)[0].children[index];
                 return found;
-            }
+            };
         },
 
         /**
@@ -163,7 +163,7 @@ export default {
             const that = this;
             return function (index) {
                 return that.items[index];
-            }
+            };
         },
 
         /**
@@ -174,8 +174,8 @@ export default {
          * @public
         */
         applyDrag (arr, dragResult) {
-            const { removedIndex, addedIndex, payload } = dragResult
-            if (removedIndex === null && addedIndex === null) return arr
+            const { removedIndex, addedIndex, payload } = dragResult;
+            if (removedIndex === null && addedIndex === null) return arr;
 
             const result = [...arr];
             let itemToAdd = payload;
@@ -211,9 +211,9 @@ export default {
              * @event cancel Handles the cancellation.
             */
             this.$emit("cancel");
-        },
+        }
     }
-}
+};
 </script>
 
 <style>
