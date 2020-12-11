@@ -6,9 +6,9 @@
 
     <drag-drop
       :dropzones="dropGroups"
-      :dropzonesTitle="'XYZ Company Teams'"
+      dropzonesTitle="XYZ Company Teams"
       :originalData="stories"
-      :originalTitle="'Tasks to be distributed'"
+      originalTitle="Tasks to be distributed"
       :inPlace="true"
       :enableSave="true"
       :enableCancel="true"
