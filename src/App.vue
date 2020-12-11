@@ -2,8 +2,6 @@
   <div id="app">
     <div class="dd-info">
       <i>All the cards displayed below are Vue Slots and can be totally customized to be any way</i>
-      <br/>
-      <br/>
     </div>
 
     <drag-drop
@@ -62,7 +60,7 @@ export default {
           done: false
         },
         {
-          title: "Place Holder",
+          title: "Task Holder",
           description: "Data Science Team",
           time: "5 days",
           done: false
@@ -71,19 +69,19 @@ export default {
 
       dropGroups: [
         {
-          name: "Business Team",
+          name: "Business",
           children: []
         },
         {
-          name: "Tech Dept",
+          name: "Tech",
           children: []
         },
         {
-          name: "Marketing Dept",
+          name: "Marketing",
           children: []
         },
         {
-          name: "Accounting Dept",
+          name: "Accounting",
           children: []
         }
       ]
