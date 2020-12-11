@@ -40,7 +40,9 @@ describe("vue-drag-n-drop.vue", () => {
 
   // Checks if the component renders.
   it("renders the component", () => {
-    expect(wrapper.contains("div")).toBe(true);
+    // expect(wrapper.contains("div")).toBe(true);
+    expect(wrapper.find('div').element).toBeTruthy();
+
   });
 
   it("provides default original list title if prop is not provided", () => {
