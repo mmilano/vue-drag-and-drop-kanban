@@ -5,7 +5,7 @@ export default {
      */
     originalData: {
         type: Array,
-        required: true,
+        required: true
     },
 
     /**
@@ -13,7 +13,7 @@ export default {
      */
     dropzones: {
         type: Array,
-        required: true,
+        required: true
     },
 
     /**
@@ -22,7 +22,7 @@ export default {
     originalTitle: {
         type: String,
         required: false,
-        default: "Original List",
+        default: "Original List"
     },
 
     /**
@@ -31,7 +31,7 @@ export default {
     dropzonesTitle: {
         type: String,
         required: false,
-        default: "Distribution data",
+        default: "Distribution data"
     },
 
     /**
@@ -42,7 +42,7 @@ export default {
     inPlace: {
         type: Boolean,
         required: false,
-        default: true,
+        default: true
     },
 
     /**
@@ -51,7 +51,7 @@ export default {
     enableSave: {
         type: Boolean,
         required: false,
-        default: true,
+        default: true
     },
 
     /**
@@ -60,6 +60,6 @@ export default {
     enableCancel: {
         type: Boolean,
         required: false,
-        default: true,
+        default: true
     },
 };
