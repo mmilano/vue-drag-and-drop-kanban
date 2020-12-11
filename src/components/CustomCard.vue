@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .cc-card {
     padding: 10px;
     text-align: left;
