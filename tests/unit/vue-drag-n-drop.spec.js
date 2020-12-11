@@ -62,7 +62,6 @@ describe("vue-drag-n-drop.vue", () => {
 
     it("runs the validation of original list and emits save event on valid data on save click", () => {
         wrapper.find("button.dd-save").trigger("click");
-
         expect(wrapper.emitted().save).toBeTruthy();
     });
 
