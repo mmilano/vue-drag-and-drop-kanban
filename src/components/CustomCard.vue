@@ -12,11 +12,11 @@
 
 <script>
 export default {
-  name: 'CustomCard',
-  props: ['data'],
+  name: "CustomCard",
+  props: ["data"],
   methods: {
     markDone() {
-      this.$emit('done', this.data);
+      this.$emit("done", this.data);
     }
   }
 }

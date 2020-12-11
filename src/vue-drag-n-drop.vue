@@ -3,9 +3,9 @@
     <h2 class="dd-title">
       {{originalTitle}}
     </h2>
-    <div class="dd-first-group"> 
-        <Container 
-          @drop="onDrop" 
+    <div class="dd-first-group">
+        <Container
+          @drop="onDrop"
           group-name="col"
           :orientation="'horizontal'"
           :get-child-payload="getOriginalCardPayload()"
@@ -27,12 +27,12 @@
       {{dropzonesTitle}}
     </h2>
     <div class="dd-result-group">
-      <div 
+      <div
         v-for="(item,ind) in dropGroups"
         v-bind:key="ind"
         class="dd-drop-container">
         {{item.name}}
-        <Container 
+        <Container
           group-name="col"
           @drop="(e) => onCardDrop(item.name, e)"
           :get-child-payload="getCardPayload(item.name)"
@@ -67,8 +67,8 @@
 
 <script>
 import { Container, Draggable } from "vue-smooth-dnd";
-import _ from 'lodash';
-import RequiredProps from './drag-n-drop-props.js';
+import _ from "lodash";
+import RequiredProps from "./drag-n-drop-props.js";
 
 export default {
   name: "VueDragNDrop",
@@ -94,18 +94,18 @@ export default {
   },
 
   methods: {
-    /** 
+    /**
      * Even that runs when an item is dropped in the original list bucket.
      * @param {Object} dropResult Holds the value of what is dropped.
      * @public
     */
     onDrop(dropResult){
       this.items = this.applyDrag(this.items, dropResult);
-      this.$emit('dropInOriginalBucket', dropResult);
+      this.$emit("dropInOriginalBucket", dropResult);
     },
 
-    /** 
-     * Runs when the card is dropped in any of the drop buckets. Handles the dropping into new bucket and 
+    /**
+     * Runs when the card is dropped in any of the drop buckets. Handles the dropping into new bucket and
      * removing from original bucket.
      * @param {String} columnId Holds the ID of the original bucket tot get the card.
      * @param {Object} dropResult Holds the drop result.
@@ -124,10 +124,10 @@ export default {
         }
       }
 
-      this.$emit('dropInDestinationBucket', columnId, dropResult);
+      this.$emit("dropInDestinationBucket", columnId, dropResult);
     },
 
-    /** 
+    /**
      * Gets the card payload
      * @param {String} Holds the ID.
     */
@@ -142,7 +142,7 @@ export default {
       }
     },
 
-    /** 
+    /**
      * Same as card payload but this is only implemented in original list.
      * @public
     */
@@ -153,7 +153,7 @@ export default {
       }
     },
 
-    /** 
+    /**
      * Applies the dragging result. It removes the item from original bucket and keeps it in new new list.
      * @param {Array} arr Holds the array.
      * @param {Object} dragResult Holds the drag information.
@@ -178,23 +178,23 @@ export default {
       return result;
     },
 
-    /** 
+    /**
      * Runs when save button is clicked. It first validates if all the items from the original list is empty.
      * @public
     */
     saveClicked() {
-      /** 
+      /**
        * @event save Emits when save is clicked so that the parent component can appropriately handle it.
-       * @type {Object} 
+       * @type {Object}
       */
-      this.$emit('save', {
+      this.$emit("save", {
         dropzones: this.dropGroups,
         originalBucket: this.items
       });
     },
 
     cancelClicked() {
-      /** 
+      /**
        * @event cancel Handles the cancellation.
       */
       this.$emit("cancel");

@@ -5,7 +5,7 @@
       <br/>
       <br/>
     </div>
-    
+
     <drag-drop
       :dropzones="dropGroups"
       :dropzonesTitle="'XYZ Company Teams'"
@@ -31,11 +31,11 @@
 
 <script>
 /* istanbul ignore file */
-import DragDrop from './vue-drag-n-drop.vue';
-import CustomCard from './components/CustomCard.vue';
+import DragDrop from "./vue-drag-n-drop.vue";
+import CustomCard from "./components/CustomCard.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     DragDrop,
     CustomCard
@@ -44,46 +44,46 @@ export default {
     return{
       stories: [
         {
-          title: 'Strategy 101',
-          description: 'Create a draft of business plan',
-          time: '3 days',
+          title: "Strategy 101",
+          description: "Create a draft of business plan",
+          time: "3 days",
           done: false
         },
         {
-          title: 'Strategy 102',
-          description: 'Finalize the plan',
-          time: '4 days',
+          title: "Strategy 102",
+          description: "Finalize the plan",
+          time: "4 days",
           done: false
         },
         {
-          title: 'Tech diagram',
-          description: 'Draw the tech data',
-          time: '4 days',
+          title: "Tech diagram",
+          description: "Draw the tech data",
+          time: "4 days",
           done: false
         },
         {
-          title: 'Place Holder',
-          description: 'Data Science Team',
-          time: '5 days',
+          title: "Place Holder",
+          description: "Data Science Team",
+          time: "5 days",
           done: false
         }
       ],
 
       dropGroups: [
         {
-          name: 'Business Team',
+          name: "Business Team",
           children: []
         },
         {
-          name: 'Tech Dept',
+          name: "Tech Dept",
           children: []
         },
         {
-          name: 'Marketing Dept',
+          name: "Marketing Dept",
           children: []
         },
         {
-          name: 'Accounting Dept',
+          name: "Accounting Dept",
           children: []
         }
       ]
@@ -117,7 +117,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
