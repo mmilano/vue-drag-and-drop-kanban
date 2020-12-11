@@ -6,10 +6,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-drag-n-drop.esm.js",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-drag-n-drop.umd.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-drag-n-drop.min.js"
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-drag-n-drop.min.js",
+    "test": "vue-cli-service test:unit"
   },
   "main": "dist/vue-drag-n-drop.umd.js",
   "module": "dist/vue-drag-n-drop.esm.js",
@@ -20,26 +21,32 @@
   "files": [
     "dist/*"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
-  },
   "dependencies": {
     "lodash": "^4.17.13",
+    "vue": "^2.6.12",
     "vue-smooth-dnd": "^0.8.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
     "@vue/cli-plugin-unit-jest": "~4.5.9",
     "@vue/cli-service": "~4.5.9",
+    "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "1.1.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
     "rollup": "^2.34.2",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "sinon": "^9.0.1",
-    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "bugs": {
@@ -51,6 +58,11 @@
       "url": "https://github.com/smaharj1"
     }
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "keywords": [
     "Vue",
     "Vue.js",
