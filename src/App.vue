@@ -29,8 +29,8 @@
 
 <script>
 /* istanbul ignore file */
-import DragDrop from "./vue-drag-n-drop.vue";
-import CustomCard from "./components/CustomCard.vue";
+import DragDrop from "@/components/drag-n-drop/Vue-Drag-N-Drop.vue";
+import CustomCard from "@/components/drag-n-drop/CustomCard.vue";
 
 export default {
     name: "app",

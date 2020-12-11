@@ -79,7 +79,7 @@ import { Container, Draggable } from "vue-smooth-dnd";
 // import _ from "lodash";
 import _cloneDeep from "lodash/cloneDeep";
 
-import RequiredProps from "./drag-n-drop-props.js";
+import RequiredProps from "./drag-n-drop-props";
 
 export default {
     name: "VueDragNDrop",
