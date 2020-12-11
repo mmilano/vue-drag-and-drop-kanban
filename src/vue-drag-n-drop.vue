@@ -67,7 +67,10 @@
 
 <script>
 import { Container, Draggable } from "vue-smooth-dnd";
-import _ from "lodash";
+
+// import _ from "lodash";
+import _cloneDeep from "lodash/cloneDeep";
+
 import RequiredProps from "./drag-n-drop-props.js";
 
 export default {
@@ -88,8 +91,10 @@ export default {
       this.dropGroups = this.dropzones;
     }
     else {
-      this.items = _.cloneDeep(this.originalData);
-      this.dropGroups = _.cloneDeep(this.dropzones);
+      // this.items = _.cloneDeep(this.originalData);
+      // this.dropGroups = _.cloneDeep(this.dropzones);
+      this.items = _cloneDeep(this.originalData);
+      this.dropGroups = _cloneDeep(this.dropzones);
     }
   },
 

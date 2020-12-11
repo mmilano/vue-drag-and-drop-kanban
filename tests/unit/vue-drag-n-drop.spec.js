@@ -1,8 +1,12 @@
 import { shallowMount } from "@vue/test-utils"
 import DragDrop from "@/vue-drag-n-drop.vue"
-import _ from "lodash";
 
-jest.mock("lodash")
+// jest.mock("lodash");
+jest.mock("lodash/cloneDeep");
+
+// import _ from "lodash";
+import _cloneDeep from "lodash/cloneDeep";
+
 
 describe("vue-drag-n-drop.vue", () => {
   let props, wrapper;
@@ -54,7 +58,8 @@ describe("vue-drag-n-drop.vue", () => {
   });
 
   it("deep clones the dropzones when inplace is false", () => {
-    expect(_.cloneDeep).toHaveBeenCalledWith(wrapper.props().dropzones);
+      // expect(_.cloneDeep).toHaveBeenCalledWith(wrapper.props().dropzones);
+      expect(_cloneDeep).toHaveBeenCalledWith(wrapper.props().dropzones);
   });
 
   it("runs the validation of original list and emits save event on valid data on save click", () => {
