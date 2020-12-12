@@ -21,8 +21,8 @@ export default {
      */
     originalTitle: {
         type: String,
-        required: false,
-        default: "Original List"
+        required: true,
+        // default: "Available"
     },
 
     /**
@@ -30,8 +30,7 @@ export default {
      */
     dropzonesTitle: {
         type: String,
-        required: false,
-        default: "Distribution data"
+        required: true,
     },
 
     /**
