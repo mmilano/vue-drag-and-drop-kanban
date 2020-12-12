@@ -34,7 +34,7 @@
 
         <div class="dd-result-group">
             <div
-            v-for="(item,ind) in dropGroups"
+            v-for="(item, ind) in dropGroups"
             v-bind:key="ind"
             class="dd-drop-container"
             >
